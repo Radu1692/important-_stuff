@@ -98,16 +98,3 @@ Write-Host "Installation complete."
 Write-Host "Verify:"
 Write-Host "  az version"
 Write-Host "  kubelogin --version"
-
-
-az account set --subscription 74e0aab8-1b73-49a9-bf65-a969965bff80
-az aks get-credentials --resource-group a1a-52572-prd-rg-swapsui-uks-01 --name a1a-52572-prd-aks-beta-uks --overwrite-existing
-kubelogin convert-kubeconfig -l azurecli
-6c8c0527-b24b-4e90-a662-2b91658e86fe
-
-f666db59-de3c-4c37-8db7-aa224b0a2c60
-
-
-Invoke-WebRequest `
-  -Uri "https://a1a52572prdstbetauks02.blob.core.windows.net/kubernetes/kubectl.exe?sv=2026-02-06&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2026-10-20T19:09:37Z&st=2026-10-20T10:54:37Z&spr=https&sig=Ru4nLIKLgSJci2KldhiVqHp4EXZjmkmaRaMWW5j18VM%3D" `
-  -OutFile "C:\Temp\kubectl.exe"
