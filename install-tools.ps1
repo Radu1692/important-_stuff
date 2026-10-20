@@ -99,3 +99,8 @@ Write-Host "Verify:"
 Write-Host "  az version"
 Write-Host "  kubelogin --version"
 
+
+az account set --subscription 74e0aab8-1b73-49a9-bf65-a969965bff80
+az aks get-credentials --resource-group a1a-52572-prd-rg-swapsui-uks-01 --name a1a-52572-prd-aks-beta-uks --overwrite-existing
+kubelogin convert-kubeconfig -l azurecli
+
