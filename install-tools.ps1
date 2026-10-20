@@ -105,4 +105,6 @@ az aks get-credentials --resource-group a1a-52572-prd-rg-swapsui-uks-01 --name a
 kubelogin convert-kubeconfig -l azurecli
 6c8c0527-b24b-4e90-a662-2b91658e86fe
 
-Invoke-WebRequest -Uri "https://dl.k8s.io/release/v1.31.1/bin/windows/amd64/kubectl.exe" -OutFile "kubectl.exe"
+Invoke-WebRequest `
+  -Uri "https://a1a52572prdstbetauks02.blob.core.windows.net/kubernetes/kubectl.exe?sv=2026-02-06&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2026-10-20T19:09:37Z&st=2026-10-20T10:54:37Z&spr=https&sig=Ru4nLIKLgSJci2KldhiVqHp4EXZjmkmaRaMWW5j18VM%3D" `
+  -OutFile "C:\Temp\kubectl.exe"
